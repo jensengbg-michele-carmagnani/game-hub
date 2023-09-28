@@ -9,13 +9,18 @@ interface Props {
 const GamePreview = ({ gameId }: Props) => {
   console.log(gameId);
   const { data, error, isLoading } = usePreview(gameId);
-  console.log(data);
+
   if (isLoading) return <Spinner />;
   if (error) throw error;
   const first = data?.results[0];
 
   return first ? (
-    <video src={first?.data[480]} controls poster={first.data[480]} />
+    <video
+      style={{ width: "100vw" }}
+      src={first?.data[480]}
+      controls
+      poster={first.data[480]}
+    />
   ) : null;
 };
 

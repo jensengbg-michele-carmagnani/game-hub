@@ -1,6 +1,8 @@
 import {
   Box,
   flexbox,
+  Grid,
+  GridItem,
   Heading,
   Image,
   SimpleGrid,
@@ -27,14 +29,18 @@ const GameDetailPage = () => {
 
   return (
     <>
-      <Box display={"flex"} flexDirection={"column"}>
-        <Heading>{game.name}</Heading>
-        <Image src={getCroppedImageUrl(game.background_image)} />
-        <ExpandableText text={game.description_raw} limit={500} />
-        <GameAttributes game={game} />
-        <GamePrevew gameId={game.id} />
-        <GameScreehots gameId={game.id} />
-      </Box>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={2}>
+        <GridItem>
+          <Heading>{game.name}</Heading>
+          <Image src={getCroppedImageUrl(game.background_image)} />
+          <ExpandableText text={game.description_raw} limit={500} />
+          <GameAttributes game={game} />
+        </GridItem>
+        <GridItem>
+          <GamePrevew gameId={game.id} />
+          <GameScreehots gameId={game.id} />
+        </GridItem>
+      </SimpleGrid>
     </>
   );
 };
