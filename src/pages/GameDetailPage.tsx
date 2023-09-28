@@ -1,7 +1,18 @@
-import { Box, flexbox, Heading, Image, Spinner, Text } from "@chakra-ui/react";
+import {
+  Box,
+  flexbox,
+  Heading,
+  Image,
+  SimpleGrid,
+  Spinner,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
 import { useParams } from "react-router-dom";
+import CriticScore from "../components/CriticScore";
+import DefinitionItem from "../components/DefinitionItem";
 import ExpandableText from "../components/ExpandableText";
+import GameAttributes from "../components/GameAttributes";
 import useGame from "../hooks/useGame";
 import getCroppedImageUrl from "../services/image-url";
 
@@ -18,6 +29,7 @@ const GameDetailPage = () => {
         <Heading>{game.name}</Heading>
         <Image src={getCroppedImageUrl(game.background_image)} />
         <ExpandableText text={game.description_raw} limit={500} />
+        <GameAttributes game={game} />
       </Box>
     </>
   );
