@@ -1,18 +1,11 @@
 import {
-  Box,
-  flexbox,
-  Grid,
   GridItem,
   Heading,
   Image,
   SimpleGrid,
   Spinner,
-  Text,
 } from "@chakra-ui/react";
-import React from "react";
 import { useParams } from "react-router-dom";
-import CriticScore from "../components/CriticScore";
-import DefinitionItem from "../components/DefinitionItem";
 import ExpandableText from "../components/ExpandableText";
 import GameAttributes from "../components/GameAttributes";
 import GamePrevew from "../components/GamePreview";

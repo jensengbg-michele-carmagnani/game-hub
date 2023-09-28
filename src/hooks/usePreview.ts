@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { Preview } from "../entities/Preview";
+import Preview from "../entities/Preview";
 import APIClient from "../services/api-client";
 
 const usePreview = (gameId: number) => {
