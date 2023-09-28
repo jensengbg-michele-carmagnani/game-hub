@@ -13,6 +13,8 @@ import CriticScore from "../components/CriticScore";
 import DefinitionItem from "../components/DefinitionItem";
 import ExpandableText from "../components/ExpandableText";
 import GameAttributes from "../components/GameAttributes";
+import GamePrevew from "../components/GamePreview";
+import { GameScreehots } from "../components/GameScreehots";
 import useGame from "../hooks/useGame";
 import getCroppedImageUrl from "../services/image-url";
 
@@ -30,6 +32,8 @@ const GameDetailPage = () => {
         <Image src={getCroppedImageUrl(game.background_image)} />
         <ExpandableText text={game.description_raw} limit={500} />
         <GameAttributes game={game} />
+        <GamePrevew gameId={game.id} />
+        <GameScreehots gameId={game.id} />
       </Box>
     </>
   );

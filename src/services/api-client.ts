@@ -6,7 +6,7 @@ export interface FetchResponse<T> {
   results: T[];
 }
 const axiosInstace = axios.create({
-  baseURL: "https://api.rawg.io/api",
+  baseURL: "https://api.rawg.io/api/",
   params: {
     key: "4cbc247249c949a5b18d2847186380dd",
   },
