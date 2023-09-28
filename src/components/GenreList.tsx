@@ -15,7 +15,6 @@ const GenreList = () => {
   const selectedGenreId = useQueryGames((s) => s.gameQuery.genreId);
   const onSelectGenre = useQueryGames((s) => s.setGenreId);
   const { data, isLoading, error } = useGenres();
-  console.log(data);
 
   if (error) return null;
 

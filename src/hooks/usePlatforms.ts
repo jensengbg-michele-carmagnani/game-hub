@@ -3,12 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import genres from "../data/genres";
 
 import APIClient from "../services/api-client";
+import { Platform } from "../entities/Platform";
 
-export interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
 const apiClient = new APIClient<Platform>("/platform");
 
 const usePlatforms = () =>

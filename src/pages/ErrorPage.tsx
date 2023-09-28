@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 
 const ErrorPage = () => {
   const error = useRouteError();
-
+  console.log(error);
   return (
     <>
       <NavBar />
@@ -14,7 +14,7 @@ const ErrorPage = () => {
         <Text>
           {isRouteErrorResponse(error)
             ? "This page does not exist!"
-            : "An unexpected Error occurred."}{" "}
+            : "An unexpected Error occurred."}
         </Text>
       </Box>
     </>

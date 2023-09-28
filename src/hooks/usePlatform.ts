@@ -1,4 +1,3 @@
-import { GameQuery } from "../App";
 import usePlatforms from "./usePlatforms";
 
 export const usePlatform = (id?: number) => {
