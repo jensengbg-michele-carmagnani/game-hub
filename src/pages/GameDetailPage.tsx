@@ -1,6 +1,7 @@
 import { Box, flexbox, Heading, Image, Spinner, Text } from "@chakra-ui/react";
 import React from "react";
 import { useParams } from "react-router-dom";
+import ExpandableText from "../components/ExpandableText";
 import useGame from "../hooks/useGame";
 import getCroppedImageUrl from "../services/image-url";
 
@@ -16,7 +17,7 @@ const GameDetailPage = () => {
       <Box display={"flex"} flexDirection={"column"}>
         <Heading>{game.name}</Heading>
         <Image src={getCroppedImageUrl(game.background_image)} />
-        <Text>{game.description_raw}</Text>
+        <ExpandableText text={game.description_raw} limit={500} />
       </Box>
     </>
   );
